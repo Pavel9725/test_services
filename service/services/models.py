@@ -8,6 +8,9 @@ class Service(models.Model):
     name = models.CharField(max_length=50)
     full_price = models.PositiveIntegerField()
 
+    def __str__(self):
+        return f'{self.name} {self.full_price}'
+
 
 class Plan(models.Model):
     PLAN_TYPES = (
